@@ -14,7 +14,19 @@ _G.KeyInput = "string"
 
 function MakeScriptHub()
     print("EnteredCorrectKey")
-    function loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/CrimsonHub/main/Script%20Loader.lua", true))
+    local Window = OrionLib:MakeWindow({Name = "Script Hub", HidePremium = false, SaveConfig = true, IntroText = "Crimson Hub"})
+        
+    Tab:AddButton({
+	    Name = "Check Key",
+	    Callback = function()
+        	if _G.KeyInput = _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotification()
+            else
+                IncorrectKeyNotification()
+            end
+      	end    
+    })
     end
 end
 
