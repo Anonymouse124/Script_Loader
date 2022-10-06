@@ -7,33 +7,28 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "Crimson hub",
-	Callback = function()
+    Name = "Crimson hub",
+    Callback = function()
         if game.GameId == 798672140 then
         
-  	end    
+  	end
+    end
 })
 
 Tab:AddButton({
-	Name = "My script(Comming Soon)",
-	Callback = function()
-      	if _G.KeyInput = _G.Key then
-        MakeScriptHub()
-        CorrectKeyNotification()
-        else
-            IncorrectKeyNotification()
-        end
-  	end    
+    Name = "My Scripts",
+    Callback = function()
+        if game.GameId == 798672140 then
+        
+  	end
+    end
 })
 
 Tab:AddButton({
-	Name = "Public Script",
-	Callback = function()
-      	if _G.KeyInput = _G.Key then
-        MakeScriptHub()
-        CorrectKeyNotification()
-        else
-            IncorrectKeyNotification()
+    Name = "Public Scripts",
+    function MakeScriptHub()
+        print("EnteredCorrectKey")
+        function loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/CrimsonHub/main/Script_Loader2.lua", true))
         end
-  	end    
+    end
 })
