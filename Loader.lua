@@ -15,19 +15,6 @@ _G.KeyInput = "string"
 function MakeScriptHub()
     print("EnteredCorrectKey")
     local Window = OrionLib:MakeWindow({Name = "Script Hub", HidePremium = false, SaveConfig = true, IntroText = "Crimson Hub"})
-        
-    Tab:AddButton({
-	    Name = "Check Key",
-	    Callback = function()
-        	if _G.KeyInput = _G.Key then
-            MakeScriptHub()
-            CorrectKeyNotification()
-            else
-                IncorrectKeyNotification()
-            end
-      	end    
-    })
-    end
 end
 
 function CorrectKeyNotification()
