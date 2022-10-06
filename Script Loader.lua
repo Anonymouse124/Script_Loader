@@ -7,20 +7,20 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-    Name = "Crimson hub",
-    Callback = function()
-        if game.GameId == 798672140 then
-        
-  	end
+    Name = "Crimson Hub",
+    function MakeScriptHub()
+        print("EnteredCorrectKey")
+        function loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/CrimsonHub/main/Script_Loader2.lua", true))
+        end
     end
 })
 
 Tab:AddButton({
-    Name = "My Scripts",
-    Callback = function()
-        if game.GameId == 798672140 then
-        
-  	end
+    Name = "My Scripts(Comming Soon)",
+    function MakeScriptHub()
+        print("EnteredCorrectKey")
+        function loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/CrimsonHub/main/Script_Loader3.lua", true))
+        end
     end
 })
 
@@ -28,7 +28,7 @@ Tab:AddButton({
     Name = "Public Scripts",
     function MakeScriptHub()
         print("EnteredCorrectKey")
-        function loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/CrimsonHub/main/Script_Loader2.lua", true))
+        function loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/CrimsonHub/main/Script_Loader4.lua", true))
         end
     end
 })
