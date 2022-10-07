@@ -13,7 +13,7 @@ _G.Key = "Crimson" -- You Put Your Key Here
 _G.KeyInput = "string"
 
 function MakeScriptHub()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/"), true))() -- You Put Your Script Here
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/Script%20Loader.lua"), true))() -- You Put Your Script Here
 
 end
 
