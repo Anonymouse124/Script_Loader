@@ -1,4 +1,3 @@
-if game.PlaceId == 8750997647 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
@@ -33,17 +32,15 @@ function autoHatch()
 end
 
 function equipBest()
-        game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
-        wait(1)
-        game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+    game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+    game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
 end
 
 function autoEquipBest()
     while _G.autoEquipBest == true do
-        game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
-        wait(1)
-        game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
-        wait(30)
+    game:GetService("ReplicatedStorage").Remotes.UnequipAll:InvokeServer()
+    game:GetService("ReplicatedStorage").Remotes.EquipBest:InvokeServer()
+    wait(30)
     end
 end
 
