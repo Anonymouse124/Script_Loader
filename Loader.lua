@@ -1,10 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "KeySystem", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
 	Name = "Your in!",
-	Content = "You are logged in as "..Players.name..",",
+	Content = "Your In The Special LEAN party",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -37,29 +36,28 @@ function WrongKeyNotifications()
 end
 
 local Tab = Window:MakeTab({
-	Name = "Key Room",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+    Name = "Key Room",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
 Tab:AddTextbox({
-	Name = "Enter Key",
-	Default = "Enter Key",
-	TextDisappear = true,
-	Callback = function(Value)
+    Name = "Enter Key",
+    Default = "Enter Key",
+    TextDisappear = true,
+    Callback = function(Value)
         _G.KeyInput = Value
-	end	  
+    end	  
 })
 
 Tab:AddButton({
-	Name = "Check Key!",
-	Callback = function()
+    Name = "Check Key!",
+    Callback = function()
         if _G.KeyInput == _G.Key then
-         MakeScriptHub()
-         CorrectKeyNotifications()
-      else
-        WrongKeyNotifications()
+        MakeScriptHub()
+        CorrectKeyNotifications()
+        else
+            WrongKeyNotifications()
         end
-  	end    
+    end    
 })
-
