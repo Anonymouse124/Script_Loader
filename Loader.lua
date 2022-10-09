@@ -1,63 +1,59 @@
+--Galaxy Temp Key System
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "KeySystem", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
-
+local Window = OrionLib:MakeWindow({Name = "Galaxy Scripts | Key System", HidePremium = true, IntroText = "Galaxy Key System", IntroIcon = "http://www.roblox.com/asset/?id=10681543154"})
+local Player = game.Players.LocalPlayer
 OrionLib:MakeNotification({
-	Name = "Your in!",
-	Content = "Your In The Special LEAN party",
-	Image = "rbxassetid://4483345998",
+	Name = "Galaxy Key",
+	Content = "Please enter the key " ..Player.Name.."",
+	Image = "http://www.roblox.com/asset/?id=11216830603",
 	Time = 5
 })
 
-_G.Key = "Crimson" -- You Put Your Key Here
+_G.Key = "GS_5q0tX7XmjAWKgnh"
 _G.KeyInput = "string"
 
-function MakeScriptHub()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/Script%20Loader.lua"), true))() -- You Put Your Script Here
-
-end
-
-
-function CorrectKeyNotifications()
+function WrongKeyNotif()
     OrionLib:MakeNotification({
-        Name = "Correct Key",
-        Content = "Welcome To The LEAN PARTY :D",
-        Image = "rbxassetid://4483345998",
+        Name = "Wrong Key!",
+        Content = "Double Check The Key, " ..Player.Name.."",
+        Image = "http://www.roblox.com/asset/?id=11216830603",
         Time = 5
     })
 end
 
-function WrongKeyNotifications()
-    OrionLib:MakeNotification({
-        Name = " Wrong Key",
-        Content = "Your Not on The List Kid",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-    })
-end
+
 
 local Tab = Window:MakeTab({
-    Name = "Key Room",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
+	Name = "Main",
+	Icon = "http://www.roblox.com/asset/?id=11216755736",
+	PremiumOnly = false
 })
 
+
+
 Tab:AddTextbox({
-    Name = "Enter Key",
-    Default = "Enter Key",
-    TextDisappear = true,
-    Callback = function(Value)
-        _G.KeyInput = Value
-    end	  
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
 })
 
 Tab:AddButton({
-    Name = "Check Key!",
-    Callback = function()
-        if _G.KeyInput == _G.Key then
-        MakeScriptHub()
-        CorrectKeyNotifications()
+	Name = "Submit Key",
+	Callback = function()
+      	if _G.KeyInput == _G.Key then
+            wait(0.001)
+            OrionLib:Destroy()
+            wait(0.1)
+	    if pcall(function() game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/Games/"..game.PlaceId..".lua") end) then
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Anoymouse124/Script_Loader/main/Games/"..game.PlaceId..".lua"))()
+	    else
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/"))()
+	    end
         else
-            WrongKeyNotifications()
+            WrongKeyNotif()
         end
-    end    
+  	end  
 })
