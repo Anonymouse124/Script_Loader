@@ -3,13 +3,13 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Galaxy Scripts | Key System", HidePremium = true, IntroText = "Galaxy Key System", IntroIcon = "http://www.roblox.com/asset/?id=10681543154"})
 local Player = game.Players.LocalPlayer
 OrionLib:MakeNotification({
-	Name = "Galaxy Key",
+	Name = "Crimson Key",
 	Content = "Please enter the key " ..Player.Name.."",
 	Image = "http://www.roblox.com/asset/?id=11216830603",
 	Time = 5
 })
 
-_G.Key = "GS_5q0tX7XmjAWKgnh"
+_G.Key = "CrimsonHub"
 _G.KeyInput = "string"
 
 function WrongKeyNotif()
