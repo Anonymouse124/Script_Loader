@@ -1,6 +1,6 @@
 --Galaxy Temp Key System
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Galaxy Scripts | Key System", HidePremium = true, IntroText = "Galaxy Key System", IntroIcon = "http://www.roblox.com/asset/?id=10681543154"})
+local Window = OrionLib:MakeWindow({Name = "Crimson Scripts | Key System", HidePremium = true, IntroText = "Crimson Key System", IntroIcon = "http://www.roblox.com/asset/?id=10681543154"})
 local Player = game.Players.LocalPlayer
 OrionLib:MakeNotification({
 	Name = "Crimson Key",
