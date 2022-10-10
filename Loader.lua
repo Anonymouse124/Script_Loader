@@ -50,7 +50,7 @@ Tab:AddButton({
 	    if pcall(function() game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/Games/"..game.PlaceId..".lua") end) then
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Anoymouse124/Script_Loader/main/Games/"..game.PlaceId..".lua"))()
 	    else
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/"))()
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonymouse124/Script_Loader/main/Script%20Loader2.lua"))()
 	    end
         else
             WrongKeyNotif()
